@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Vu Tran - Application Champion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Data Loading Script -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('resume', () => ({
+                experience: [],
+                skills: [],
+                init() {
+                    // In a real-world scenario, you would create a resume-data.json file 
+                    // and use: fetch('resume-data.json').then(res => res.json()).then(data => { ... })
+                    // For this example, we'll define the data directly in the script.
+                    const data = {
+                        "experience": [
+                            { 
+                                "date": "Jul 2019 - Present", 
+                                "title": "Project Delivery Lead I IT, Tulane University", 
+                                "description": "In charge of communications and project delivery for one of various projects around the university." 
+                            },
+                            { 
+                                "date": "Jul 2018 - Jun 2019", 
+                                "title": "Developer IV, Tulane University", 
+                                "description": "Develop, innovate, and design custom applications university wide." 
+                            },
+                            { 
+                                "date": "Jan 2015 - Jun 2018", 
+                                "title": "Advanced Application Developer, Tulane University", 
+                                "description": "Develop and support enterprise wide applications." 
+                            },
+                            { 
+                                "date": "Sep 2010 - Jan 2015", 
+                                "title": "Intermediate Application Developer, Tulane University", 
+                                "description": "Develop and support enterprise wide applications." 
+                            },
+                             { 
+                                "date": "Jun 2010 - Aug 2010", 
+                                "title": "Web Application Analyst, Tulane University", 
+                                "description": "Web Application Analyst role at Tulane University."
+                            }
+                        ],
+                        "skills": [
+                           "Responsive Web Design",
+                           "Microsoft Word",
+                           "Application Development",
+                           "C#",
+                           "HTML5",
+                           "Node.js",
+                           "JavaScript",
+                            "CSS3",
+                            "Vue.js",
+                            "React.js",
+                            "Tailwind CSS",
+                            "Alpine.js",
+                            "Git",
+                            "GitHub",
+                            "Agile Methodologies",
+                            "Restful APIs",
+                            "SQL",
+                        ]
+                    };
+                    this.experience = data.experience;
+                    this.skills = data.skills;
+                }
+            }))
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* This is a placeholder for where Headless UI would be used for more complex components like modals or dropdowns */
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- App Container -->
+    <div class="min-h-screen container mx-auto px-4 sm:px-6 lg:px-8" x-data="resume">
+
+        <!-- Header & Navigation -->
+        <header x-data="{ open: false }" class="py-6">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-gray-900">JVT</a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition-colors">Experience</a>
+                    <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors">Contact</a>
+                </nav>
+                <!-- <a href="#" class="hidden md:inline-block bg-indigo-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-indigo-700 transition-all">Download CV</a> -->
+                <button @click="open = !open" class="md:hidden text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div x-show="open" x-collapse class="md:hidden mt-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#about" @click="open = false" class="text-gray-600 hover:text-indigo-600 transition-colors block text-center py-2 rounded-lg hover:bg-gray-100">About</a>
+                    <a href="#experience" @click="open = false" class="text-gray-600 hover:text-indigo-600 transition-colors block text-center py-2 rounded-lg hover:bg-gray-100">Experience</a>
+                    <a href="#projects" @click="open = false" class="text-gray-600 hover:text-indigo-600 transition-colors block text-center py-2 rounded-lg hover:bg-gray-100">Projects</a>
+                    <a href="#contact" @click="open = false" class="text-gray-600 hover:text-indigo-600 transition-colors block text-center py-2 rounded-lg hover:bg-gray-100">Contact</a>
+                    <a href="#" class="bg-indigo-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-indigo-700 transition-all text-center">Download CV</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="py-12 md:py-24">
+            <!-- Hero Section -->
+            <section id="hero" class="text-center">
+                <img src="https://placehold.co/128x128/E0E7FF/4F46E5?text=JVT" alt="John Doe" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">Jonathan Vu Tran</h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600">Application Champion based in Greater New Orleans Area, LA</p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="https://apps.trantech.solutions" class="text-gray-500 hover:text-indigo-600" target="_blank">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.838 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jonny5v" class="text-gray-500 hover:text-indigo-600" target="_blank">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.714c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.714h-3v-5.6c0-1.33-.027-3.033-1.849-3.033-1.85 0-2.135 1.446-2.135 2.936v5.697h-3v-11h2.87v1.316h.04c.4-.759 1.37-1.54 2.83-1.54 3.02 0 3.578 1.986 3.578 4.568v6.656z"/></svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-20 md:py-32">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">About Me</h2>
+                    <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+                        I am a passionate and results-oriented Software Engineer with a knack for developing elegant solutions to complex problems. With over 15 years of experience in the tech industry, I have honed my skills in full-stack development, with a particular focus on modern JavaScript frameworks like React and Vue.js. I thrive in collaborative environments and am always eager to learn new technologies.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Experience Section (Dynamically Generated) -->
+            <section id="experience" class="py-20 md:py-32 bg-white rounded-2xl shadow-sm">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16">Work Experience</h2>
+                    <div class="relative border-l-2 border-indigo-200 ml-6">
+                        <!-- Experience items will be injected here by Alpine.js -->
+                        <template x-for="(job, index) in experience" :key="index">
+                            <div class="mb-12">
+                                <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 mt-1.5"></div>
+                                <div class="ml-10">
+                                    <time class="text-sm font-semibold uppercase text-gray-500" x-text="job.date"></time>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1" x-text="job.title"></h3>
+                                    <p class="text-gray-600 mt-2" x-text="job.description"></p>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section (Dynamically Generated) -->
+            <section id="skills" class="py-20 md:py-32">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Skills</h2>
+                    <div class="mt-12 flex flex-wrap justify-center gap-4">
+                        <!-- Skill items will be injected here by Alpine.js -->
+                        <template x-for="skill in skills" :key="skill">
+                            <span class="bg-indigo-100 text-indigo-800 text-base font-medium px-4 py-2 rounded-full" x-text="skill"></span>
+                        </template>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-20 md:py-32">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get In Touch</h2>
+                    <p class="mt-4 text-lg text-gray-600">I'm currently open to new opportunities. Feel free to send me a message!</p>
+                    <a href="mailto:me@jonathanvutran.com" class="mt-8 inline-block bg-indigo-600 text-white font-medium py-3 px-8 rounded-lg hover:bg-indigo-700 transition-all text-lg">
+                        Say Hello
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="py-8 border-t border-gray-200">
+            <div class="text-center text-gray-500">
+                <p>&copy; 2025 Jonathan Vu Tran. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
