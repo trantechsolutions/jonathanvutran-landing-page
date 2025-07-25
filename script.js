@@ -38,7 +38,9 @@ function populateBusinessCard(data) {
         <div class="contact-links">
             <a href="mailto:${info.email}" title="Email"><i class="fas fa-envelope"></i></a>
             <a href="${info.linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="tel:${info.phone}" title="Phone"><i class="fas fa-phone-alt"></i></a>
+            <a href="${info.github}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="${info.website}" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+            <a href="${info.projects}" target="_blank" title="Projects"><i class="fas fa-clipboard"></i></a>
         </div>
 
         <div class="action-buttons">
