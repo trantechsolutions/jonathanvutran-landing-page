@@ -1,0 +1,103 @@
+:root {
+    --primary-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --background-color: #eef2f5;
+    --card-background: #ffffff;
+    --primary-text: #212529;
+    --secondary-text: #495057;
+    --accent-color: #007bff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.business-card {
+    background: var(--card-background);
+    padding: 3rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    border-top: 5px solid var(--accent-color);
+}
+
+.card-name {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    margin: 0;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--accent-color);
+    margin: 0.25rem 0 1.5rem 0;
+}
+
+.card-tagline {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    margin: 0 0 2rem 0;
+    line-height: 1.5;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-links a {
+    color: var(--secondary-text);
+    font-size: 1.75rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+.btn.secondary:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}

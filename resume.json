@@ -1,0 +1,98 @@
+{
+  "personalInfo": {
+    "name": "Jonathan V. Tran",
+    "phone": "(000) 000-0000",
+    "email": "me@jonathanvutran.com",
+    "linkedin": "https://linkedin.com/in/jonathanvutran",
+    "location": "Greater New Orleans Area, LA"
+  },
+  "summary": "Seasoned and highly versatile IT professional with over 15 years of experience architecting and developing solutions across higher education and private consulting. Possesses deep expertise in full-stack development (React, Vue, .NET) and multi-cloud infrastructure, managing environments in both Microsoft Azure and AWS. Proven ability in cybersecurity, successfully implementing the NIST SP 800-171 framework to secure sensitive data. Adept at translating complex institutional and business needs into scalable, secure, and user-centric technology solutions.",
+  "experience": [
+    {
+      "title": "IT Consultant",
+      "company": "TransTech Solutions",
+      "location": "Greater New Orleans Area, LA",
+      "dates": "2021 – Present",
+      "description": [
+        "Implemented comprehensive cybersecurity controls for clients to achieve compliance with NIST SP 800-171, successfully addressing all 110 security control points for SPRS reporting.",
+        "Designed, deployed, and managed secure, scalable WordPress websites for multiple clients using AWS services (EC2, S3, Route 53), ensuring high availability and performance.",
+        "Configured, secured, and managed client network infrastructure, including UniFi switches and SonicWall firewalls, to protect against threats, segment traffic, and optimize connectivity.",
+        "Provided end-to-end IT strategy and support for small businesses, from hardware procurement to cloud architecture and data security."
+      ]
+    },
+    {
+      "title": "Senior Full-Stack Developer | Full-Stack Developer | Jr Developer",
+      "company": "Tulane University",
+      "location": "New Orleans, LA",
+      "dates": "2010 - Present",
+      "description": [
+        "Led the ground-up development of a new student services portal using React and .NET Core, resulting in a 40% improvement in mobile usability.",
+        "Spearheaded the migration of three critical on-premise legacy applications to Microsoft Azure, establishing automated CI/CD pipelines with Azure DevOps that reduced deployment times by over 75%.",
+        "Engineered and maintained a suite of internal administrative applications, leveraging JavaScript, HTML, and CSS to create intuitive user interfaces that automated key departmental processes.",
+        "Developed and maintained departmental websites and web applications using HTML, CSS, JavaScript, and .NET.",
+        "Collaborated with faculty and staff to gather requirements and deliver technical solutions.",
+        "Automated data reporting tasks, reducing manual effort by 30%."
+      ]
+    },
+    {
+      "title": "Desktop Support Assistant",
+      "company": "Lofton Staffing Agency",
+      "location": "Metairie, LA",
+      "dates": "2009-2010",
+      "description": [
+        "Provided front-line technical support for hardware and software issues to over 500 faculty and staff members.",
+        "Achieved a 95% user satisfaction rating through timely and effective problem resolution.",
+        "Developed a passion for programming by creating scripts to automate routine support tasks."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "university": "Tulane University",
+      "location": "New Orleans, LA",
+      "degree": "Bachelors of Science, Applied Applications",
+      "graduationDate": "2009"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Cloud & DevOps",
+      "items": [
+        "Microsoft Azure",
+        "Amazon Web Services (AWS)",
+        "Azure DevOps (CI/CD)",
+        "EC2, S3, Route 53"
+      ]
+    },
+    {
+      "category": "Cybersecurity & Networking",
+      "items": [
+        "NIST SP 800-171",
+        "Security Controls Implementation",
+        "Firewall Management (SonicWall)",
+        "Network Configuration (UniFi)"
+      ]
+    },
+    {
+      "category": "Development",
+      "items": [
+        "React",
+        "Vue.js",
+        ".NET Core",
+        "C#",
+        "JavaScript (ES6+)",
+        "HTML5 & CSS3",
+        "WordPress"
+      ]
+    },
+    {
+      "category": "General IT",
+      "items": [
+        "Agile Methodologies",
+        "IT Strategy & Consulting",
+        "Higher Education Systems (SIS, LMS)",
+        "Technical Support"
+      ]
+    }
+  ]
+}
